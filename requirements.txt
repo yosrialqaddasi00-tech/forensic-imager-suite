@@ -1,2 +1,14 @@
-# This tool uses Python 3 standard libraries only (os, sys, hashlib, argparse, etc.)
-
+# Forensic Imager Suite — dependency-free.
+#
+# This tool is built entirely on the Python 3 standard library
+# (os, sys, argparse, hashlib, csv, subprocess, ...). There is NOTHING to
+# `pip install` — just run it with a supported Python interpreter.
+#
+# Minimum Python version: 3.7
+#   (uses f-strings and the `dataclasses` module, both introduced in 3.7)
+#
+# Runtime prerequisites (OS-level, NOT pip packages):
+#   - Linux (tested on Kali / Debian-based distributions)
+#   - root privileges (the tool refuses to run otherwise)
+#   - the `blockdev` utility, shipped with `util-linux`, for device size
+#     and write-block probes (falls back gracefully when imaging plain files)
